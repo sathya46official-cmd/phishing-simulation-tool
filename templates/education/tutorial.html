@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block title %}Phishing Tutorial{% endblock %}
+
+{% block extra_css %}
+<style>
+.tutorial-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 80vh;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.chapter {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    backdrop-filter: blur(10px);
+}
+
+.matrix-text {
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="tutorial-page">
+    <div class="text-center mb-5">
+        <h1 class="display-4 matrix-text">{{ book_title }}</h1>
+        <p class="lead">Interactive Cybersecurity Education</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chapter">
+                <h3><i class="fas fa-eye me-2"></i>Chapter 1: Recognizing Phishing</h3>
+                <p>Learn to identify the telltale signs of phishing attempts:</p>
+                <ul>
+                    <li>Suspicious sender addresses</li>
+                    <li>Urgent or threatening language</li>
+                    <li>Generic greetings</li>
+                    <li>Suspicious links and attachments</li>
+                </ul>
+                <div class="alert alert-danger mt-3">
+                    <strong>⚠️ Phishing Example:</strong><br>
+                    "URGENT: Your account will be suspended in 24 hours! Click here to verify: http://fake-bank.com"
+                </div>
+                <div class="text-center mt-3">
+                    <a href="{{ url_for('education.chapter1') }}" class="btn btn-danger btn-sm">
+                        <i class="fas fa-book-open me-1"></i>Read Chapter 1
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="chapter">
+                <h3><i class="fas fa-shield-alt me-2"></i>Chapter 2: Protection Strategies</h3>
+                <p>Best practices to stay safe:</p>
+                <ul>
+                    <li>Verify sender identity independently</li>
+                    <li>Check URLs before clicking</li>
+                    <li>Use two-factor authentication</li>
+                    <li>Keep software updated</li>
+                </ul>
+                <div class="alert alert-success mt-3">
+                    <strong>✅ Safe Practice:</strong><br>
+                    Always type URLs directly or use bookmarks instead of clicking email links.
+                </div>
+                <div class="text-center mt-3">
+                    <a href="{{ url_for('education.chapter2') }}" class="btn btn-success btn-sm">
+                        <i class="fas fa-book-open me-1"></i>Read Chapter 2
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chapter">
+                <h3><i class="fas fa-bug me-2"></i>Chapter 3: Common Attack Types</h3>
+                <ul>
+                    <li><strong>Spear Phishing:</strong> Targeted attacks</li>
+                    <li><strong>Whaling:</strong> Targeting executives</li>
+                    <li><strong>Smishing:</strong> SMS phishing</li>
+                    <li><strong>Vishing:</strong> Voice phishing</li>
+                </ul>
+                <div class="text-center mt-3">
+                    <a href="{{ url_for('education.chapter3') }}" class="btn btn-warning btn-sm">
+                        <i class="fas fa-book-open me-1"></i>Read Chapter 3
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="chapter">
+                <h3><i class="fas fa-exclamation-triangle me-2"></i>Chapter 4: What to Do</h3>
+                <p>If you suspect phishing:</p>
+                <ol>
+                    <li>Don't click any links</li>
+                    <li>Don't download attachments</li>
+                    <li>Report to IT security</li>
+                    <li>Delete the message</li>
+                    <li>Change passwords if compromised</li>
+                </ol>
+                <div class="text-center mt-3">
+                    <a href="{{ url_for('education.chapter4') }}" class="btn btn-info btn-sm">
+                        <i class="fas fa-book-open me-1"></i>Read Chapter 4
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-5">
+        <a href="{{ url_for('simulation.phishing_test') }}" class="btn btn-light btn-lg me-3">
+            <i class="fas fa-graduation-cap me-2"></i>Take the Test
+        </a>
+        <a href="{{ url_for('education.guidelines') }}" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-book me-2"></i>Security Guidelines
+        </a>
+    </div>
+</div>
+{% endblock %}

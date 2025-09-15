@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Chapter 3: Common Attack Types{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        <div class="card">
+            <div class="card-header bg-warning text-dark">
+                <h2><i class="fas fa-bug me-2"></i>Chapter 3: Common Attack Types</h2>
+            </div>
+            <div class="card-body">
+                <h4>Types of Phishing Attacks</h4>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-header bg-danger text-white">
+                                <h5>Spear Phishing</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Target:</strong> Specific individuals or organizations</p>
+                                <p><strong>Method:</strong> Highly personalized attacks using researched information</p>
+                                <div class="alert alert-danger">
+                                    <strong>Example:</strong> Email appearing to be from your CEO asking for urgent wire transfer
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                            <div class="card-header bg-info text-white">
+                                <h5>Smishing (SMS Phishing)</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Target:</strong> Mobile phone users</p>
+                                <p><strong>Method:</strong> Fraudulent text messages</p>
+                                <div class="alert alert-danger">
+                                    <strong>Example:</strong> "Your bank account has been compromised. Click here to secure it: [malicious link]"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-header bg-dark text-white">
+                                <h5>Whaling</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Target:</strong> High-profile executives</p>
+                                <p><strong>Method:</strong> Sophisticated attacks targeting C-level executives</p>
+                                <div class="alert alert-danger">
+                                    <strong>Example:</strong> Fake legal subpoena or regulatory compliance request
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                            <div class="card-header bg-secondary text-white">
+                                <h5>Vishing (Voice Phishing)</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Target:</strong> Phone users</p>
+                                <p><strong>Method:</strong> Fraudulent phone calls</p>
+                                <div class="alert alert-danger">
+                                    <strong>Example:</strong> Caller claiming to be from your bank asking for account verification
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Attack Progression</h4>
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <div class="col-md-3">
+                                <i class="fas fa-search fa-3x text-primary mb-2"></i>
+                                <h6>1. Reconnaissance</h6>
+                                <p>Attackers research targets</p>
+                            </div>
+                            <div class="col-md-3">
+                                <i class="fas fa-envelope fa-3x text-warning mb-2"></i>
+                                <h6>2. Delivery</h6>
+                                <p>Malicious email sent</p>
+                            </div>
+                            <div class="col-md-3">
+                                <i class="fas fa-mouse-pointer fa-3x text-danger mb-2"></i>
+                                <h6>3. Exploitation</h6>
+                                <p>User clicks/responds</p>
+                            </div>
+                            <div class="col-md-3">
+                                <i class="fas fa-key fa-3x text-dark mb-2"></i>
+                                <h6>4. Access</h6>
+                                <p>System compromised</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('education.chapter4') }}" class="btn btn-info btn-lg me-3">
+                        <i class="fas fa-arrow-right me-2"></i>Next: Chapter 4
+                    </a>
+                    <a href="{{ url_for('education.chapter2') }}" class="btn btn-outline-secondary btn-lg">
+                        <i class="fas fa-arrow-left me-2"></i>Previous: Chapter 2
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

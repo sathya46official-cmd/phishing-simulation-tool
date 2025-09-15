@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Email Simulation{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-warning text-dark">
+                <h3 class="mb-0"><i class="fas fa-envelope me-2"></i>Email Simulation</h3>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info" role="alert">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Educational Purpose:</strong> This simulation sends educational phishing awareness emails 
+                    that are clearly marked as training materials.
+                </div>
+                
+                <form method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Recipient Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                               placeholder="user@example.com" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid email address.
+                        </div>
+                        <div class="form-text">
+                            The simulation email will be clearly marked as educational content and logged locally.
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Development Mode:</strong> Emails are logged to the system instead of being sent via SMTP.
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-warning btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i>Send Simulation Email
+                        </button>
+                        <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary btn-lg ms-3">
+                            <i class="fas fa-home me-2"></i>Back to Home
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5><i class="fas fa-lightbulb me-2"></i>What to Expect</h5>
+            </div>
+            <div class="card-body">
+                <p>The simulation email will contain:</p>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-success me-2"></i>Clear educational warning at the top</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Examples of common phishing tactics</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Educational content about recognition</li>
+                    <li><i class="fas fa-check text-success me-2"></i>No actual malicious content or links</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

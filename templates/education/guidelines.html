@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Security Guidelines{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h2><i class="fas fa-shield-alt me-2"></i>Cybersecurity Guidelines</h2>
+        <p class="text-muted">Essential practices for staying safe online</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h5><i class="fas fa-check-circle me-2"></i>Email Security Best Practices</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li class="safe-example mb-2">
+                        <strong>✅ Verify sender identity</strong><br>
+                        Contact the sender through a different channel to confirm legitimacy
+                    </li>
+                    <li class="safe-example mb-2">
+                        <strong>✅ Check URLs carefully</strong><br>
+                        Hover over links to see the actual destination before clicking
+                    </li>
+                    <li class="safe-example mb-2">
+                        <strong>✅ Use two-factor authentication</strong><br>
+                        Enable 2FA on all important accounts
+                    </li>
+                    <li class="safe-example mb-2">
+                        <strong>✅ Keep software updated</strong><br>
+                        Install security updates promptly
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header bg-danger text-white">
+                <h5><i class="fas fa-exclamation-triangle me-2"></i>Red Flags to Watch For</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li class="phishing-example mb-2">
+                        <strong>⚠️ Urgent language</strong><br>
+                        "Act now or your account will be closed!"
+                    </li>
+                    <li class="phishing-example mb-2">
+                        <strong>⚠️ Generic greetings</strong><br>
+                        "Dear Customer" instead of your actual name
+                    </li>
+                    <li class="phishing-example mb-2">
+                        <strong>⚠️ Suspicious attachments</strong><br>
+                        Unexpected files, especially .exe or .zip
+                    </li>
+                    <li class="phishing-example mb-2">
+                        <strong>⚠️ Poor grammar/spelling</strong><br>
+                        Professional organizations rarely have typos
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5><i class="fas fa-clipboard-list me-2"></i>Incident Response Checklist</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>If you suspect phishing:</h6>
+                        <ol>
+                            <li>Don't click any links or download attachments</li>
+                            <li>Don't provide any personal information</li>
+                            <li>Report the email to your IT security team</li>
+                            <li>Delete the suspicious email</li>
+                            <li>Run a security scan on your device</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>If you think you've been compromised:</h6>
+                        <ol>
+                            <li>Change all your passwords immediately</li>
+                            <li>Check your accounts for unauthorized activity</li>
+                            <li>Contact your bank if financial info was involved</li>
+                            <li>Report the incident to authorities if necessary</li>
+                            <li>Monitor your credit reports</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a href="{{ url_for('education.tutorial') }}" class="btn btn-primary btn-lg me-3">
+        <i class="fas fa-book me-2"></i>Back to Tutorial
+    </a>
+    <a href="{{ url_for('simulation.phishing_test') }}" class="btn btn-success btn-lg">
+        <i class="fas fa-graduation-cap me-2"></i>Test Your Knowledge
+    </a>
+</div>
+{% endblock %}

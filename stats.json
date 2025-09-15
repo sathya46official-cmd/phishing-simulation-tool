@@ -1,0 +1,41 @@
+{
+  "total_users": 0,
+  "tests_completed": 0,
+  "emails_sent": 6,
+  "websites_cloned": 0,
+  "test_results": [],
+  "email_logs": [
+    {
+      "recipient": "sathya46offical@gmail.com",
+      "subject": "Phishing Simulation",
+      "timestamp": "2025-09-15T19:06:08.494799"
+    },
+    {
+      "recipient": "sathya46offical@gmail.com",
+      "subject": "Phishing Simulation",
+      "timestamp": "2025-09-15T19:06:15.091412"
+    },
+    {
+      "recipient": "sathya46offical@gmail.com",
+      "subject": "Phishing Simulation",
+      "timestamp": "2025-09-15T21:09:46.890709"
+    },
+    {
+      "recipient": "sathya46offical@gmail.com",
+      "subject": "Phishing Simulation",
+      "timestamp": "2025-09-15T21:09:52.011674"
+    },
+    {
+      "recipient": "sathya46offical@gmail.com",
+      "subject": "Phishing Simulation",
+      "timestamp": "2025-09-15T22:43:33.869656"
+    },
+    {
+      "recipient": "sathya46offical@gmail.com",
+      "subject": "Phishing Simulation",
+      "timestamp": "2025-09-15T22:43:35.733714"
+    }
+  ],
+  "clone_logs": [],
+  "created_at": "2025-09-15T14:41:27.187855"
+}

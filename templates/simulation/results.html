@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Test Results{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0"><i class="fas fa-trophy me-2"></i>Test Results</h3>
+            </div>
+            <div class="card-body text-center">
+                <div class="mb-4">
+                    {% if percentage >= 80 %}
+                        <i class="fas fa-medal fa-5x text-success mb-3"></i>
+                        <h2 class="text-success">Excellent!</h2>
+                        <p class="lead">You have a strong understanding of phishing identification.</p>
+                    {% elif percentage >= 60 %}
+                        <i class="fas fa-thumbs-up fa-5x text-warning mb-3"></i>
+                        <h2 class="text-warning">Good Job!</h2>
+                        <p class="lead">You're on the right track. Consider reviewing the tutorial for improvement.</p>
+                    {% else %}
+                        <i class="fas fa-book fa-5x text-info mb-3"></i>
+                        <h2 class="text-info">Keep Learning!</h2>
+                        <p class="lead">We recommend reviewing the educational materials and retaking the test.</p>
+                    {% endif %}
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>{{ score }}</h4>
+                        <p class="text-muted">Correct Answers</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>{{ total }}</h4>
+                        <p class="text-muted">Total Questions</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>{{ "%.1f"|format(percentage) }}%</h4>
+                        <p class="text-muted">Score</p>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="{{ url_for('education.generate_certificate', score=score, total=total) }}" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-download me-2"></i>Download Certificate
+                    </a>
+                    <a href="{{ url_for('simulation.phishing_test') }}" class="btn btn-outline-primary btn-lg me-3">
+                        <i class="fas fa-redo me-2"></i>Retake Test
+                    </a>
+                    <a href="{{ url_for('education.tutorial') }}" class="btn btn-outline-info btn-lg">
+                        <i class="fas fa-book me-2"></i>Review Tutorial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
