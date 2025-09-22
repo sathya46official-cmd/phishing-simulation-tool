@@ -12,10 +12,11 @@ class EmailService:
     """Service for sending simulated phishing emails"""
     
     def __init__(self):
-        self.smtp_server = os.environ.get('SMTP_SERVER', 'smtp.gmail.com')
-        self.smtp_port = int(os.environ.get('SMTP_PORT', '587'))
-        self.sender_email = os.environ.get('SENDER_EMAIL', 'your-email@gmail.com')
-        self.sender_password = os.environ.get('SENDER_PASSWORD', '')
+        # Hardcoded Gmail SMTP configuration
+        self.smtp_server = 'smtp.gmail.com'
+        self.smtp_port = 587
+        self.sender_email = 'demoone913@gmail.com'
+        self.sender_password = 'eqldcmvdcpcowhoa'  # Gmail App Password (Phishing Simulator)
         
     def send_notification_email(self, recipient_email, subject, body):
         """

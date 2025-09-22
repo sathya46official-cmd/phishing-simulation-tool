@@ -13,7 +13,7 @@ class StatisticsService:
     def __init__(self):
         self.stats_file = 'stats.json'
         self.logs_dir = 'logs'
-        self.cloned_sites_dir = os.environ.get('UPLOAD_FOLDER', 'cloned_sites')
+        self.cloned_sites_dir = 'cloned_sites'  # Hardcoded path
         self._ensure_stats_file()
     
     def _ensure_stats_file(self):
